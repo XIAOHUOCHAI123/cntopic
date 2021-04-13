@@ -393,9 +393,8 @@ topic2.load_lda_model(modelpath='output/model/lda.model')
 
 - [知乎专栏：数据科学家](https://zhuanlan.zhihu.com/dadeng)
 
-    ​    
+   
+<br>
 
-## 支持一下
-
-![](img/my_zanshang_qrcode.jpg)
+![](img/大邓和他的Python.png)
 
