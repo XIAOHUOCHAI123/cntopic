@@ -208,7 +208,7 @@ topic.train_lda_model(n_topics=10) #指定n_topics，构建LDA话题模型
 |2|预测document对应的话题|topic.get_document_topics(document)||
 |3|显示每种话题与对应的特征词之间关系|topic.show_topics()||
 |4|数据中不同话题分布情况|topic.topic_distribution(raw_documents)|raw_documents是列表或series，如本教程中的df['content']|
-|5|可视化LDA话题模型（**功能不稳定**）|topic.visualize_lda()|可视化结果在output中查找vis.html文件，浏览器打开即可|
+
 
 ## 4.1 准备document
 假设有一个文档 ``'游戏体育真有意思'`` 分词处理得到document
