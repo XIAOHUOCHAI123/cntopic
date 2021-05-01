@@ -1,12 +1,18 @@
 # cntopic
 简单好用的lda话题模型，支持中英文。该库基于gensim，实现了lda话题模型。
 
+
+<br>
+
 # 安装
 
 
 ```python
 pip install cntopic
 ```
+
+<br>
+
 
 # 使用
 这里给大家引入一个场景，假设大家采集新闻数据，忘记采集新闻文本对应的新闻类别，如果人工标注又很费工夫。这时候我们可以用lda话题模型帮我们洞察数据中的规律，发现新闻有n种话题群体。这样lda模型对数据自动打标注topic_1, topic_2, topic_3... ,topic_n。
@@ -19,6 +25,10 @@ lda训练过程，大致分为
 3. 训练lda模型
 4. 使用lda模型
 5. 存储与导入lda模型
+
+<br>
+
+
 # 1. 读取文件
 这里我们用一个新闻数据,一共有10类，每类1000条数据，涵盖
 
@@ -111,7 +121,7 @@ df['label'].value_counts()
     科技    1000
     Name: label, dtype: int64
 
-
+<br>
 
 # 2. 准备数据
 一般准备数据包括:
@@ -151,6 +161,7 @@ print(documents[:5])
     ['赛区', '锦标赛', '冠军', '这些', '归功于', '坎巴', '沃克', '康涅狄格', '大学', '主教练', '吉姆', '卡洪', ...],
     ['称赞', '一名', '纯正', '控卫', '而且', '能为', '我们', '得分', '单场', '42', '有过', '单场', '17', '助攻', ...]]
 
+<br>
 
 # 3. 训练lda模型
 现在开始正式使用cntopic模块，开启LDA话题模型分析。步骤包括
@@ -194,7 +205,7 @@ topic.train_lda_model(n_topics=10) #指定n_topics，构建LDA话题模型
 
     <gensim.models.ldamulticore.LdaMulticore at 0x158da5090>
 
-
+<br>
 
 # 4. 使用LDA模型
 
@@ -333,7 +344,7 @@ topic.topic_distribution(raw_documents=df['content'])
 综上，目前模型还算可以，表现还能接受。
 
 
-
+<br>
 
 # 五、存储与导入lda模型
 lda话题模型训练特别慢，如果不保存训练好的模型，实际上是在浪费我们的生命和电脑计算力。
@@ -366,7 +377,7 @@ topic2.load_lda_model(modelpath='output/model/lda.model')
 
 
 
-
+<br>
 
 
 
@@ -383,7 +394,7 @@ topic2.load_lda_model(modelpath='output/model/lda.model')
 
 感兴趣的童鞋不妨 戳一下[《python网络爬虫与文本数据分析》](https://ke.qq.com/course/482241?tuin=163164df)进来看看~
 
-
+<br>
 
 ## 更多
 
